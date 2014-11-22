@@ -8,12 +8,17 @@
       document.write("<br />");
 
       // array
-      var eggspressions = [];
-      eggspressions[0] = "skeptical";
+      var eggspressions = []; //declare the array
+      eggspressions[0] = "skeptical"; //set the values for the array 
       eggspressions[1] = "frazzled";
       eggspressions[2] = "silly";
       eggspressions[3] = "giggling";
-      //document.write(eggspressions.length);
+      document.write(eggspressions[3] + " is the last element in the array");
+      document.write("<br />");
+      document.write(" " + eggspressions[eggspressions.length-1] + " is the last element");
+      //we have to put -1 because length counts itself in units and it starts at zero, 
+      //so the last one in length is actually 4, but in the 4th place holder there is no value. 
+      //theres no eggspressions[4]
     </script>
   </head>
   <body>

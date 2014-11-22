@@ -34,3 +34,10 @@ var kitten = "Fluffy";
 Compare a value to another value:
 
 if ( kitten == cat ) */
+
+
+	//javascript spaces dont matter
+//but ORDER DOES matter
+//computer reads top to bottom, and executes instructions in the order that you give them 
+
+//function gets called in HTML

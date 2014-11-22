@@ -10,9 +10,10 @@
       productPrices[4] = 24.99;
       productPrices[5] = 8.99;
 
-      for (i=0; i < productPrices.length; i++) {
+      //productPrices.length returns the length of the array, number of things in it. 
+      for (i=0; i < productPrices.length; i++) { //its stopping if it runs out. 
         var value = productPrices[i];
-        if (value > 15){
+        if (value > 15){  //==true, but thats implied
           document.write("Product " + (i+1) + " is on sale.<br />");
         } else {
           document.write("Product " + (i+1) + " is not on sale.<br />");

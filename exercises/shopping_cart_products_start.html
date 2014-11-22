@@ -43,22 +43,23 @@
 
 	function showSalePrices(password) {
 		var submittedPassword = document.getElementById("password").value;
+		//the if for the rest of everything to work
 		if ( submittedPassword == "llc" ) {
 /* *** YOUR CODE _BELOW_ HERE **** */
 
 	  	var salePrices = new Array();
 
 	  	/* 1. Create a loop to get the value of each productPrices value */
+	  	for(i=0; i<productPrices.length; i++){
 	  	/* 2. Discount each original price by 50%
 	  	      and save this new price to the salePrices array
 	  	      at the matching index.  */
-
-
-
+	  		salePrices[i] = (productPrices[i] * 0.5);
+	  	}
 	  	/* 3. updatePrices() accepts one parameter: an array of prices
 	  	      to automagically update the webpage's prices in purple text.
-	  	      So pass in the salesPrices array as a parameter to the updatePrices function. */
-		updatePrices();
+	  	      So pass in the salePrices array as a parameter to the updatePrices function. */
+		updatePrices(salePrices);
 
 /* *** YOUR CODE ^ABOVE^ HERE **** */
 		}else{
@@ -81,7 +82,7 @@
   			// update the html containers with the "price" class
   			for (var i=0; i<priceList.length; i++ ) {
   				priceContainers[i].innerHTML = "$" + priceList[i];
-  				priceContainers[i].setAttribute("class", "price discounted");
+  				priceContainers[i].setAttribute("class", "price discounted");//!! this applies two classes! 
   			}
 
   		}else{

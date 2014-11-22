@@ -15,12 +15,16 @@
     /* 1. Declare 4 variables named
           "nameIsBlank", "addressIsBlank", "cityIsBlank", and "postalIsBlank"
           that will each hold Boolean values. */
+          var nameIsBlank = name == "";   //DONT PT BRACKETS AROUND IT
+          var addressIsBlank = address == "";
+          var cityIsBlank = city == "";
+          var postalIsBlank = postal == "";
 
 
     /* 2a. Use conditional if/else statements on the variables
            "name", "address", "city", and "postal" to determine
            if each individual field is not blank.
-
+            
        2b. Update their respective Boolean variables based on their
            individual if/else statements. */
 
@@ -28,9 +32,16 @@
     /* 3. In a final conditional, test ALL FOUR fields
           and alert the proper message  */
 
+          //verbose way to write: if (nameIsBlank == true){ do stuff }
+          if (nameIsBlank || addressIsBlank || cityIsBlank || postalIsBlank) {  //if x or x or x or x (is true, ie, is blank)
+            alert( "Sorry there are errors. Form fields cannot be blank!" );
+          }else{
+            alert( "Thank you for your order!" );
+          }
+
     // below are some alert messages you can use
-    alert( "Sorry there are errors. Form fields cannot be blank!" );
-    alert( "Thank you for your order!" );
+    //alert( "Sorry there are errors. Form fields cannot be blank!" );
+    //alert( "Thank you for your order!" );
 
     /* *** YOUR CODE ^ABOVE^ HERE **** */
   }
