@@ -18,7 +18,7 @@
 
         //EXAMPLE: Use concatenation to add a human readable $ sign to the price
         var totalCost = quantity * 20; //quantity * fixed price OF $20
-        //var totalCostToShow =
+        var totalCostToShow = ("$" + totalCost);
 
         //this will update the HTML textfield
         document.getElementById('updateTotal').value = totalCost;

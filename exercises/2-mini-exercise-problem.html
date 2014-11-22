@@ -6,18 +6,18 @@
 <script>
   /* 1. set var 'quantity' to start at 0. This will be
   used to hold the value for the quantity of robots */
-  var quantity;
+  var quantity= 100;
 
   function addItem(){
     // CODE HERE EXECUTES WHEN YOU PRESS THE 'ADD' BUTTON
     //2. set the variable 'quantity' to increase by 1 HERE
-
+    quantity = quantity + 1;
     refreshTotal();
   }
   function removeItem(){
     // CODE HERE EXECUTES WHEN YOU PRESS THE 'REMOVE' BUTTON
     //3. set the variable 'quantity' to decrease HERE
-
+    quantity = quantity - 1;
     refreshTotal();
   }
   function refreshTotal() {

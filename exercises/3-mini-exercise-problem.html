@@ -14,7 +14,13 @@
     /* 1. Use a conditional if/else statement on the "quantity" variable
           to avoid having negative products. */
 
-    quantity--;
+          if (quantity <= 0){
+            alert( "Thats not enough!");
+          }else{
+            quantity--;
+          }
+
+    
 
     /* *** YOUR CODE ^ABOVE^ HERE **** */
     refreshTotal();
@@ -25,10 +31,12 @@
     /* 2. Use a conditional if statement on the "quantity" variable
           to determine if the shopping cart is (or is not) empty. */
 
-    // below are some alert messages you can use
-    alert( "Sorry, you don't have anything in your cart!" );
-    alert( "Thank you for your order!" );
-
+        if (quantity <= 0){
+        // below are some alert messages you can use
+          alert( "Sorry, you don't have anything in your cart!" );
+        }else{
+          alert( "Thank you for your order!" );
+        }
     /* *** YOUR CODE ^ABOVE^ HERE **** */
   }
 
@@ -36,7 +44,7 @@
     var totalCost = quantity * 20; //quantity * fixed price
     document.getElementById('updateQuantity').value = quantity; //updates
     // 3. A nice to have: Put a dollar sign in front of the totalCost
-    document.getElementById('updateTotal').value = (totalCost);
+    document.getElementById('updateTotal').value = ("$" + totalCost);
   }
 </script>
 
