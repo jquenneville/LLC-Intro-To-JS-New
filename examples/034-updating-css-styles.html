@@ -4,29 +4,53 @@
     <style>
       .original {
         text-align: center;
-        width: 100px;
+        width: 500px;
         padding: 5px 10px;
         border: 1px solid #999;
         cursor: pointer;
         background-color: white;
         color: black;
       }
-    </style>
-
-    <script>
-      var button = document.getElementById("clickme");
-      function restyle() {
-        if ( button ) {
-
-        } else {
-
-        }
+      .selected {
+        text-align: center;
+        width: 500px;
+        padding: 5px 10px;
+        border: 1px solid #999;
+        cursor: pointer;
+        background-color: black;
+        color: white;
       }
-    </script>
+    </style>
+ 
   </head>
   <body>
     <div id="clickme" class="original" onclick="restyle();">
       Click me!
     </div>
+
+
+
+    <script>
+      var button = document.getElementById("clickme");
+      button.selected = false;
+
+      function restyle() {
+        if ( button.selected == false ) {
+          button.className = 'selected';
+          button.selected = true;
+        } else {
+          button.className = 'original';
+          button.selected = false;
+        }
+      }
+    </script>
+
+
+
+
+
+
+
+
   </body>
 </html>

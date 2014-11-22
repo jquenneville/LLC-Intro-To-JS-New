@@ -12,20 +12,34 @@
         color: black;
       }
     </style>
-    <script>
-      var button = document.getElementById("clickme");
-      function restyle() {
-        if ( button ) {
+    
 
-        } else {
 
-        }
-      }
-    </script>
+
   </head>
   <body>
     <div id="clickme" onclick="restyle();">
       Click me!
     </div>
+
+
+
+<script>
+      var button = document.getElementById("clickme");
+      button.selected = false;
+
+      function restyle() {
+        if ( button.selected == false ) {
+          button.style.backgroundColor = 'green';
+          button.selected = true;
+        } else {
+          button.style.backgroundColor = 'white';
+          button.selected = false;
+        }
+      }
+    </script>
+
+
+
   </body>
 </html>

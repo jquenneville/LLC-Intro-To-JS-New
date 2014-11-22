@@ -2,13 +2,29 @@
   <head>
     <title>JavaScript example!</title>
     <script>
-      var existingElement = document.getElementById("text");
-
+      //changing stuff in the dom, so the script goes in the body, not hte head
     </script>
   </head>
+  
+
+
+
   <body>
+  
+
     <p id="text" style="border: 1px solid red;">
       Loading...
     </p>
+  
+
+
+    <script type="text/javascript">
+    var existingElement = document.getElementById("text");
+    existingElement.innerHTML = "WHATEVER";
+    </script>
+  
+
+
+
   </body>
 </html>
